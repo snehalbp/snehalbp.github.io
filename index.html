@@ -1,253 +1,162 @@
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Homepage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snehal B. Prabhudesai</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #D61F69;
+      --secondary: #22A1F7;
+      --accent: #7C3AED;
+      --dark: #333333;
+      --light: #F5F5F5;
+    }
+    body { font-family: 'Inter', sans-serif; background-color: #fbfbfb; color: var(--dark); }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 600; }
+    .btn { @apply font-medium px-6 py-2 rounded-lg border-2 border-black text-black hover:bg-gray-200; }
+    .card { @apply bg-white border border-black rounded-xl p-6 shadow-sm; }
+  </style>
+</head>
+<body>
+  <header class="bg-[#f0f1fa]">
+    <div class="container mx-auto flex justify-end items-center py-4 px-4 md:px-6">
+      <nav>
+        <ul class="flex flex-wrap gap-4 md:space-x-6 text-base">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#publications" class="hover:underline">Publications</a></li>
+          <li><a href="CV.pdf" class="hover:underline">CV</a></li>
+          <!-- <li><a href="#contact" class="btn">Contact</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">Welcome</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="#one">Research</a></li>
-							<li><a href="#four">Projects</a></li>
-							<li><a href="CV.pdf" target="_blank" rel="noopener noreffer" class="button primary">CV</a></li>
-						</ul>
-					</nav>
-				</header>
+  <main class="container mx-auto py-12 px-4 md:px-6 space-y-12">
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>Hi, I'm Snehal Prabhudesai </h2>
-							<p>
-								<br>
-								I'm a Ph.D. Candidate in Computer Science and Engineering at The University of Michigan.<br>
-								<br>
-								I use principled methods from Human-Computer Interaction and Uncertainty Quantification<br> 
-								to facilitate better interactions between clinicians and healthcare technologies.
-								<br>
-								<br>
-								I'm advised by <a href="http://www.nikolabanovic.net/">Dr. Nikola Banovic</a>, <a href=https://me.engin.umich.edu/people/faculty/xun-ryan-huan>Dr. Xun Huan</a>  and  <a href=https://medicine.umich.edu/dept/dcmb/arvind-rao-phd>Dr. Arvind Rao</a>.
-							</p>
-						</header>
-						<span class="image"><img src="images/profile.png" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+    <!-- About Section -->
+    <section id="about" class="grid grid-cols-1 md:grid-cols-[max-content,auto] items-start gap-24">
+      <!-- Profile & Contacts -->
+      <div class="flex flex-col h-full">
+        <div class="w-48 md:w-64 aspect-square rounded-full overflow-hidden">
+          <img src="assets/profile.jpg" alt="Snehal Prabhudesai" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col items-start space-y-2 text-left md:ml-4 mt-4 md:mt-8">
+          <div class="flex items-center space-x-2">
+            <i class="fa-brands fa-square-twitter text-xl"></i>
+            <a href="https://twitter.com/snehalbp" class="hover:underline">Twitter</a>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-brands fa-linkedin text-xl"></i>
+            <a href="https://linkedin.com/in/snehalbp" class="hover:underline">LinkedIn</a>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-square-envelope text-xl"></i>
+            <a href="mailto:snehalbp@umich.edu" class="hover:underline">Email</a>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-brands fa-square-github text-xl"></i>
+            <a href="https://github.com/snehalbp" class="hover:underline">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bio -->
+      <div>
+        <h1 class="text-4xl mb-4">Hi, I'm Snehal Prabhudesai.</h1>
+        <p class="mb-4">I am a sixth-year PhD student at the Department of Computer Science and Engineering at the University of Michigan, Ann Arbor. My work envisions AI uncertainty as a generative resource to support Human-AI decision-making. To achieve this vision, I:</p>
+        <ul class="list-disc list-inside mb-4">
+          <li><strong>Build</strong> computational algorithms that quantify the AI uncertainty,</li>
+          <li><strong>Design</strong> frameworks that situate this uncertainty in relation to decision-makers,</li>
+          <li><strong>Study</strong> how people make decisions under uncertainty.</li>
+        </ul>
+        <p class="mb-4"><span style="color: #FA61A8;">To implement my vision, I use a mixed-methods approach</span>, combining uncertainty quantification techniques such as Bayesian inference, Machine Learning and statistical modeling with human-centered methods of think-aloud, semi-structured interviews and surveys. My research draws on the interdisciplinary expertise of my mentors – Nikola Banovic (Computer Science and Engineering), Xun Huan (Mechanical Engineering) and Arvind Rao (Michigan Medicine). I also study the impact of the tools and methods I develop across different decision-making settings, such as student engagement with LLMs, integrating AI into clinical workflows, and scenario planning for disaster risk management. Ultimately, my work seeks to make AI uncertainty actionable, so decision-makers can make better informed decisions.</p>
+        <p class="mb-4"><span style="color: #CB82F8;">My research has been published in HCI and Scientific AI venues</span> such as ACM CHI, IUI, TOCHI, Nature Communications and Frontiers. I have disseminated my research by talks at the Society of Industrial and Applied Mathematics. Additionally, my research has been covered in academic blog posts and news articles. I have enjoyed working with a global network of researchers from Microsoft Research NYC, Kyushu Institute of Technology Japan, Australian National University, University of Toronto, and University College London. My dissertation work has helped secure a 5-year, $7.5 million grant from the Office of Naval Research to study uncertainty communication for disaster risk management.</p>
+        <p class="mb-4"><span style="color: #238DFF;">I am deeply passionate about science communication and making my ideas widely accessible to the public</span>, through creating AI exhibits for Michigan Science Centre and AI panel sessions at the Ann Arbor District Library. My work has been awarded by the CSE Department for excellence in improving climate and outreach.</p>
+        <p class="font-semibold mb-4">I will be on the 2025-2026 job market for industry and academic positions.</p>
+      </div>
+    </section>
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/gap.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<br>
-										<h2>The Translation Gap</h2>
-										<p>The promise of medical technologies and their failure to migrate to the medical field.</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>Medical technologies promise to alleviate the burden on the clinician,
-										speed up workflows and deliver better clinical outcomes. 
-										However, these systems are not widely accepted
-										and seamlessly deployed in clinical practice. Systems unexpectedly fail in 
-										real-world settings, complicate processes and leave end users frustrated.
-										 
-									</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>In my research, I investigate the nature of this "translation gap", 
-										understand the context of use, and design 
-										interventions that would help these technologies deliver what they promise. 
-										<span style="color:#e44c65">My goal is to re-align technological advancements with the needs of end users,
-											taking a step towards closing this gap.</span> 
-									
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+    <!-- Recent News Section (Boxed) -->
+    <section id="news" class="mx-auto max-w-8xl bg-white border border-gray-200 rounded-lg p-8">
+        <h2 class="text-3xl font-semibold mb-2">Recent News</h2> 
+        <p class="text-sm text-gray-600 mb-6">Last updated: April 28th, 2025</p>
+        <ul class="space-y-6">
+          <li class="flex items-start space-x-3">
+            <span class="text-2xl">🎓</span>
+            <div class="text-left">
+              <span class="font-mono text-sm text-gray-500">04/2025</span>
+              <span class="font-medium">Passed Thesis Proposal.</span> Thanks to Nikola Banovic, Xun Huan, Vera Liao, Richard Gonzalez and Jessica Hullman for serving on my dissertation committee.
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <span class="text-2xl">🎤</span>
+            <div class="text-left">
+              <span class="font-mono text-sm text-gray-500">04/2025</span>
+              <span class="font-medium">Presenting at CHI2025.</span> Presenting our work at CHI 2025. Excited to visit Japan and practice my Japanese!
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <span class="text-2xl">✈️</span>
+            <div class="text-left">
+              <span class="font-mono text-sm text-gray-500">07/2025</span>
+              <span class="font-medium">Presenting at COMPASS2025.</span> Will be traveling to University of Toronto for Doctoral Consortium.
+            </div>
+          </li>
+        </ul>
+      </section>
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/technology.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Closing the Gap: Designing better Technology</h2>
-							<p><span style="color:#b09af6">Designing tools and methods to support better interactions</span></p>
-							<!-- <p>Leveraging existing knowledge considering context of use.</p> -->
-						</header>
-						<p>Current technologies are limited in their scope. They do not allow users to
-							interrogate them, probe them or analyze them in different scenarios. Moreover,
-							they do not give a truthful presentation of their failure modes. 
-							<br>
-							<br>
-							This creates a need to rigorously evaluate these systems before they are deployed,
-							in scenarios that are reflective of the real-world. I design methods that add a layer
-							of interrogation, such that users can be informed of the limitations of these technologies.
-						</p>
-						<!-- <ul class="actions">
-							<li><a href="https://doi.org/10.3389/fnins.2021.740353" target="_blank" rel="noopener noreffer" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+    <!-- Publications Section -->
+    <section id="publications">
+        <h2 class="text-3xl mb-6 pb-2 border-b border-black inline-block">Select Publications</h2>
+        <a href="https://scholar.google.com/citations?user=wzcN6GIAAAAJ&hl=en" class="hover:underline"><p class="text-sm text-gray-600 mb-6">See all published work --> </p></a>
+        <div class="flex flex-col gap-24 mt-6">
+          <!-- Publication 1 -->
+          <div class="card flex flex-col md:flex-row items-start md:items-center space-x-4">
+            <img src="assets/interface-01.png" alt="Here the GPT made a choice, and every choice can be biased" class="w-16 h-16 object-cover rounded-md">
+            <div>
+              <h3 class="text-lg font-semibold">"Here the GPT made a choice, and every choice can be biased": How Students Critically Engage with LLMs through End-User Auditing Activity</h3>
+              <p class="text-sm">Snehal Prabhudesai, Ananya Prashant Kasi, Anmol Mansingh, Anindya Das Antar, Hua Shen, Nikola Banovic</p>
+              <p><a href="https://dl.acm.org/doi/10.1145/3706598.3713714" class="text-sm" style="color: #238DFF;" class="hover:underline">CHI 2025</a></p>
+              <p class="text-sm italic">Prompted the Vice President of Information and Technology Services Office at UM to investigate their policy on student LLM use. Press coverage by <a href="https://cse.engin.umich.edu/stories/bridging-the-ai-literacy-gap-in-higher-education" class="hover:underline">UM CSE</a> and <a href="https://www.michigandaily.com/news/administration/u-m-gpt-one-year-later/" class="hover:underline">Michigan Daily</a>.</p>
+            </div>
+          </div>
+          <!-- Publication 2 -->
+          <div class="card flex flex-col md:flex-row items-start md:items-center space-x-4">
+            <img src="assets/interface-02.png" alt="Understanding Uncertainty: How Lay Decision-makers Perceive and Interpret Uncertainty in Human-AI Decision Making" class="w-16 h-16 object-cover rounded-md">
+            <div>
+              <h3 class="text-lg font-semibold">Understanding Uncertainty: How Lay Decision-makers Perceive and Interpret Uncertainty in Human-AI Decision Making</h3>
+              <p class="text-sm">Snehal Prabhudesai, Leyao Yang, Sumit Asthana, Xun Huan, Q. Vera Liao, Nikola Banovic</p>
+              <p><a href="https://dl.acm.org/doi/abs/10.1145/3581641.3584033" class="text-sm" style="color: #238DFF;" class="hover:underline">IUI 2023</a></p>
+              <p class="text-sm italic">Shoutout to <a href="https://www.fmyang.com/" class="hover:underline">Fumeng Yang</a> for including this work as teaching material for <a href="https://fumeng-yang.github.io/CMSC839E/" class="hover:underline">CMSC839E: Uncertainty Communication for Decision-making</a> at University of Maryland, College Park.</p>
+            </div>
+          </div>
+          <!-- Publication 3 -->
+          <div class="card flex flex-col md:flex-row items-start md:items-center space-x-4">
+            <img src="assets/interface-03.png" alt="Lowering the computational barrier: Partially Bayesian neural networks for transparency in medical imaging AI" class="w-16 h-16 object-cover rounded-md">
+            <div>
+              <h3 class="text-lg font-semibold">Lowering the computational barrier: Partially Bayesian neural networks for transparency in medical imaging AI</h3>
+              <p class="text-sm">Snehal Prabhudesai, Jeremiah Hauth, Dingkun Guo, Arvind Rao, Nikola Banovic, Xun Huan</p>
+              <p><a href="https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2023.1071174/full" class="text-sm" style="color: #238DFF;" class="hover:underline">Frontiers in Computer Science: Responsible AI in Healthcare, 2023</a></p>
+              <!-- <p class="text-sm"></p> -->
+              <p class="text-sm italic">Invited to present at several SIAM conferences to communicate findings to the mathematical and statistics community. Forthcoming press by SIAM News Online.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/human_centred.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Closing the Gap: Human-centered Approach</h2>
-							<p><span style="color:#5480f1">Involving stakeholders and understanding their needs and abilities</span></p>
-						</header>
-						<p>
-							Designers of technology are very often different from the users. For technologies
-							to be useful, the first step is understand what the users want. A Human-centered
-							design approach places the user at the forefront, and any interventions are aimed
-							at mitigating the problems the user is facing.  
-							<br>
-							<br>
-							However, technologies are often developed without this perspective, leading to greater
-							harm than good. In my research, I seek to understand what effects do such technologies 
-							have on the users, whether it empowers them or leads to more harm.    
-						</p>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+  </main>
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Research Projects</h2>
-							<!-- <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p> -->
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid major fa-search"></span>
-									<h3>Holistic Evaluation of Tumor Segmentation Algorithm</h3>
-									<p>Summary statistics are not sufficient to understand the extent of algorithmic failure.
-										We explored how algorithms can be better evaluated, considering robustness, data quality, confidence and diagnostic performance. 
-									</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid major fa-project-diagram"></span>
-									<h3>Uncertainty Quantification with Bayesian Neural Networks</h3>
-									<p>Communicating uncertainty allows algorithms to be transparent about decisions. However, computing uncertainty is very costly.
-										We designed a method that computes uncertainty at a very low computational cost.
-									</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid major fa-user"></span>
-									<h3>Understanding decision-makers' perception of uncertainty.</h3>
-									<p>Humans make decisions without explicitly thinking of uncertainty in their daily lives. 
-										Do things change when such uncertainty is made explicit? How? We're conducting a study to 
-										investigate the effects of uncertainty communication.
-									</p>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Research Group Affiliations</h2>
-							<!-- <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p> -->
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="circle-image"><img src="images/comphci.jpg"/></span>
-									<h3>Computational <br> HCI Lab</h3>
-									<p>Computer Science and Engineering,<br> 
-										University of Michigan</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="circle-image"><img src="images/UQ-logo-2.jpg"/></span>
-									<h3>Uncertainty Quantification & Scientific Machine Learning Group</h3>
-									<p>Mechanical Engineering,<br> 
-										University of Michigan</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="circle-image"><img src="images/SIBL.jpg"/></span>
-									<h3>Systems Imaging & <br> Bioinformatics Lab</h3>
-									<p>Computational Medicine and Bioinformatics,<br> 
-										Michigan Medicine</p>
-								</section>
-							</div>
-						</div>
-					</div>
-					<!-- <div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-paper-plane"></span>
-							<h3>Non semper interdum</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-						</section>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-file"></span>
-							<h3>Odio laoreet accumsan</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-						</section>
-						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-lock"></span>
-							<h3>Massa arcu accumsan</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-						</section>
-					</div> -->
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://twitter.com/snehalbp" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/snehalbp" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/snehal-prabhudesai-093b22143/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="mailto: snehalbp@umich.edu" class="icon solid  fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2021 Snehal Prabhudesai</li>
-						<li>Photos by <a href="https://www.pexels.com/@tara-winstead">Tara Winstead</a>, <a href="https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott Graham</a> on <a href="https://unsplash.com">Unsplash</a> and <a href="https://www.pexels.com/@mart-production">MART PRODUCTION</a> on <a href="https://www.pexels.com">Pexels</a></li>
-					</ul>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- Footer -->
+  <footer class="border-t border-black py-6">
+    <div class="container mx-auto text-center text-sm">
+      &copy; 2025 Snehal B. Prabhudesai. 
+    </div>
+  </footer>
+</body>
 </html>
